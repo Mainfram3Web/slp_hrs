@@ -23,17 +23,18 @@ const getSleepHours = (day) => {
       break;
     default:
      NaN;    
+}
 };
   
 const getActualSleepHours = () => {
- getSleepHours('Monday') +
+ return getSleepHours('Monday') +
  getSleepHours('Tuesday') +   
  getSleepHours('Wednesday') +
  getSleepHours('Thursday') + 
  getSleepHours('Friday') +
  getSleepHours('Saturday') +
- getSleepHours('Sunday') +  
-   return;
+ getSleepHours('Sunday');  
+   
  };
 
 const getIdealSleepHours = () => {
@@ -41,7 +42,7 @@ const getIdealSleepHours = () => {
   return idealHours * 7;
 };
 
-function calculateSleepDebt() {;
+function calculateSleepDebt() {
   let actualSleepHours = getActualSleepHours();
   let idealSleepHours = getIdealSleepHours();
   
@@ -55,5 +56,3 @@ function calculateSleepDebt() {;
    console.log('You got' + (actualSleepHours - idealSleepHours) + 'more hours of sleep than you needed');
    };
  };
- 
- calculateSleepDebt();
